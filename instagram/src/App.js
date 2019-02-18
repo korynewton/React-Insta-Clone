@@ -17,7 +17,9 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <PostContainer posts={this.state.posts} />
+        <div>
+          {this.state.posts.map((post, index) => <PostContainer key={index} posts={post} />)}
+        </div>
       </div>      
     );
   }
