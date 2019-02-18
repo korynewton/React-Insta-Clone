@@ -24,7 +24,7 @@ const PostContainer = (props) => {
 }
 
 PostContainer.propTypes = {
-    posts : PropTypes.array
+    posts : PropTypes.object
 }
 
 
