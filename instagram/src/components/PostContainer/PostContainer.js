@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import './PostContainer.css'
 
 const PostContainer = (props) => {
-    console.log(props.posts)
+    // console.log(props.posts)
     return (
         <div className='postContainer'>
             <div className='postHeader'>
@@ -16,7 +16,7 @@ const PostContainer = (props) => {
             </div>
             <div>
                 <h6>{props.posts.username}</h6>
-                <CommentSection comment={props.posts.comments}/>
+                <CommentSection comments={props.posts.comments}/>
             </div>
             <input type="text" placeholder="add another comment"/>
         </div>

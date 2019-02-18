@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const CommentSection = (props) => {
     return (
         <div>
-            {props.comment.map((c, index) => <Comment key={index} user={c.username} text={c.text} />)}
+            {props.comments.map((comment, index) => <Comment key={index} user={comment.username} text={comment.text} />)}
         </div>
     )
 
