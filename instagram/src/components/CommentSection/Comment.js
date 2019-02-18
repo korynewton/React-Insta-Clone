@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Comment = (props) => {
     return (
@@ -6,6 +7,11 @@ const Comment = (props) => {
             <span className='user'>{props.user}</span> <span className='text'>{props.text}</span>
         </div>
     )
+}
+
+Comment.propTypes = {
+    user: PropTypes.string,
+    text: PropTypes.string
 }
 
 
