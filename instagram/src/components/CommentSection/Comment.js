@@ -2,8 +2,8 @@ import React from 'react'
 
 const Comment = (props) => {
     return (
-        <div>
-            @{props.user}: {props.text}
+        <div className='individualComment'>
+            <span className='user'>{props.user}</span> <span className='text'>{props.text}</span>
         </div>
     )
 }
