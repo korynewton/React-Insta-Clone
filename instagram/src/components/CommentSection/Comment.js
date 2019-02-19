@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+// import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 
 
 const Comment = (props) => {

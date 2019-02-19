@@ -2,15 +2,14 @@ import React from 'react'
 import CommentSection from '../CommentSection/CommentSection'
 import PropTypes from 'prop-types'
 import './PostContainer.css'
-import heart from '../../images/icons/heart.svg'
-import comment from '../../images/icons/message-circle.svg'
-import { Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardImg, CardBody} from 'reactstrap';
+import LikeComponent from './LikeComponent';
+
+
 
 
 
 const PostContainer = (props) => {
-    // console.log(props.postId)
     return (
         <Card className='postContainer'>
             <div className='postHeader'>
@@ -21,13 +20,16 @@ const PostContainer = (props) => {
                 <CardImg src={props.posts.imageUrl} alt={props.posts.username}/>
             </div>
             <CardBody>
-                <div className="postIcons">
+                <div className="likeContainer">
+                    <LikeComponent likes={props.posts.likes} />
+                </div>
+                {/* <div className="postIcons">
                     <img src={heart} alt="Like"/>
                     <img src={comment} alt="Comment"/>
                 </div>
                 <div className="likesTotal">
                     <CardSubtitle>{props.posts.likes} likes</CardSubtitle>
-                </div>
+                </div> */}
                 <div className='postComments'>
                     <CommentSection comments={props.posts.comments} postId={props.postId} />
                 </div>
