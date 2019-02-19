@@ -13,6 +13,10 @@ Comment.propTypes = {
     user: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
 }
+Comment.defaultProps = {
+    user: 'Username unavailable',
+    text: 'Text unavailable'
+}
 
 
 export default Comment
