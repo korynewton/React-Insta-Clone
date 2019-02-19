@@ -1,7 +1,9 @@
 .postContainer {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* width: 80%; */
     /* max-width: 800px; */
+
+    
     width:640px;
     display: flex;
     flex-flow: column nowrap;
@@ -30,5 +32,14 @@
 
 .postComments {
     /* border: 1px solid green; */
+}
+
+.input {
+    margin: 15px 0;
+}
+
+.postIcons img {
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 

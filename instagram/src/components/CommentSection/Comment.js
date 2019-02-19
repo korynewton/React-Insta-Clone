@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Comment = (props) => {
     return (
         <div className='individualComment'>
-            <span className='user'>{props.user}</span> <span className='text'>{props.text}</span>
+            <strong className='user'>{props.user}</strong> <span className='text'>{props.text}</span>
         </div>
     )
 }
