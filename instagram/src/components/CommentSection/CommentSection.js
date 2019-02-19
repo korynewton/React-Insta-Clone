@@ -6,11 +6,24 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comments: props.comments
+            comments: props.comments,
+            currentValue: ''
         }        
     }
 
+    addNewComment = (event, index) => {
+        event.preventDefault();
+        const newComment = {
+            username : 'TestUser',
+            text: this.state.currentValue
+        }
+        // this.setState({
+        //     comments[index] : [...comments[index], newComment]
+        // })
+    }
+
     render() {
+        console.log(this.state.comments[0])
         return (
             <>
                 {this.state.comments.map((comment, index) => <Comment key={index} user={comment.username} text={comment.text} />)}
