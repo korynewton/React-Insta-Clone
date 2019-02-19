@@ -38,10 +38,6 @@ const PostContainer = (props) => {
                 <div className='postComments'>
                     <CommentSection comments={props.posts.comments}/>
                 </div>
-                <InputGroup className='input'>
-                    <Input placeholder="Add a Comment..." />
-                    <InputGroupAddon addonType="append">Comment</InputGroupAddon>
-                </InputGroup>
             </CardBody>
             
             

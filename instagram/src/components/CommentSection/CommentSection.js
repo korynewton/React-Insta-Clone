@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Comment from './Comment'
 import PropTypes from 'prop-types'
+import InputComponent from './InputComponent'
+
 
 class CommentSection extends Component {
     constructor(props) {
@@ -23,10 +25,11 @@ class CommentSection extends Component {
     }
 
     render() {
-        console.log(this.state.comments[0])
+        // console.log(this.state.comments[0])
         return (
             <>
                 {this.state.comments.map((comment, index) => <Comment key={index} user={comment.username} text={comment.text} />)}
+                <InputComponent />
             </>
         )
     }
