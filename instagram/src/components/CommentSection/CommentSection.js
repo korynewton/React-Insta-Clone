@@ -3,6 +3,7 @@ import Comment from './Comment'
 import PropTypes from 'prop-types'
 
 const CommentSection = (props) => {
+    console.log(props.comments)
     return (
         <>
             {props.comments.map((comment, index) => <Comment key={index} user={comment.username} text={comment.text} />)}
@@ -12,8 +13,7 @@ const CommentSection = (props) => {
 }
 
 CommentSection.propTypes = {
-    comment: PropTypes.array,
-    post: PropTypes.object
+    comments: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default CommentSection
