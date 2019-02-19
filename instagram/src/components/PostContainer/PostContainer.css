@@ -1,3 +1,29 @@
 .postContainer {
     border: 1px solid red;
+    /* max-width: 650px; */
 }
+
+.postHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid blue;
+    height:50px;
+}
+
+.postHeader p {
+    margin:auto 0;
+}
+
+.postHeader img {
+    border-radius: 50%;
+    width:30px;
+    height: 30px;
+
+}
+
+.postComments {
+    border: 1px solid green;
+}
+
