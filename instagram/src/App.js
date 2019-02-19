@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('App component mounted')
+    // console.log('App component mounted')
     this.setState({
       posts : dummyData
     })
@@ -25,7 +25,7 @@ class App extends Component {
       <div>
         <Header />
         <div>
-          {this.state.posts.map((post, index) => <PostContainer key={index} posts={post} />)}
+          {this.state.posts.map((post, index) => <PostContainer key={index} postId={index} posts={post} />)}
         </div>
       </div>      
     );

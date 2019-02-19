@@ -8,28 +8,45 @@ class CommentSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            postId: props.postId,
             comments: props.comments,
-            currentValue: ''
+            comment: ''
         }        
     }
 
-    addNewComment = (event, index) => {
-        event.preventDefault();
+    commentHandler = e => {
+        this.setState({comment : e.target.value});
+    }
+
+    // addNewComment = (event) => {
+    //     console.log(event.target.value)
+    //     event.preventDefault();
+        // const newComment = {
+        //     username : 'Hard Coded User',
+        //     text: event.target.value
+        // }
+    //     this.setState({
+    //         comments : [...this.state.comments, newComment]
+    //     })
+    // }
+
+    commmentSubmit = e => {
+        e.preventDefault();
         const newComment = {
-            username : 'TestUser',
-            text: this.state.currentValue
+            username : 'HardCodedUsername',
+            text: this.state.comment
         }
-        // this.setState({
-        //     comments[index] : [...comments[index], newComment]
-        // })
+        const comments = this.state.comments.slice();
+        comments.push(newComment);
+        this.setState({ comments, comment: ""})
     }
 
     render() {
-        // console.log(this.state.comments[0])
+        console.log(this.state)
         return (
             <>
                 {this.state.comments.map((comment, index) => <Comment key={index} user={comment.username} text={comment.text} />)}
-                <InputComponent />
+                <InputComponent commentHandler={this.commentHandler} comment={this.state.comment} commmentSubmit={this.commmentSubmit}/>
             </>
         )
     }

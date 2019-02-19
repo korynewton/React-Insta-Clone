@@ -7,17 +7,10 @@ import comment from '../../images/icons/message-circle.svg'
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
 
-import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
-
-
-
-
-//react strap <Card/> and <CardContainer/>
-
 
 
 const PostContainer = (props) => {
-    // console.log(props.posts)
+    // console.log(props.postId)
     return (
         <Card className='postContainer'>
             <div className='postHeader'>
@@ -36,7 +29,7 @@ const PostContainer = (props) => {
                     <CardSubtitle>{props.posts.likes} likes</CardSubtitle>
                 </div>
                 <div className='postComments'>
-                    <CommentSection comments={props.posts.comments}/>
+                    <CommentSection comments={props.posts.comments} postId={props.postId} />
                 </div>
             </CardBody>
             
