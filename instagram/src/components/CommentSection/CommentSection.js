@@ -16,4 +16,8 @@ CommentSection.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.object)
 }
 
+CommentSection.defaultProps = {
+        username: 'Username unavailable',
+        text: 'Text unavailable'
+}
 export default CommentSection
