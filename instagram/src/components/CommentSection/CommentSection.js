@@ -3,7 +3,7 @@ import Comment from './Comment'
 import PropTypes from 'prop-types'
 
 const CommentSection = (props) => {
-    console.log(props.comments)
+    // console.log(props.comments)
     return (
         <>
             {props.comments.map((comment, index) => <Comment key={index} user={comment.username} text={comment.text} />)}
