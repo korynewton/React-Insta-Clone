@@ -17,7 +17,7 @@ import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 
 
 const PostContainer = (props) => {
-    // console.log(props.posts)
+    console.log(props.posts)
     return (
         <Card className='postContainer'>
             <div className='postHeader'>
@@ -31,6 +31,9 @@ const PostContainer = (props) => {
                 <div className="postIcons">
                     <img src={heart} alt="Like"/>
                     <img src={comment} alt="Comment"/>
+                </div>
+                <div className="likesTotal">
+                    <CardSubtitle>0 likes</CardSubtitle>
                 </div>
                 <div className='postComments'>
                     <CommentSection comments={props.posts.comments}/>
@@ -47,7 +50,14 @@ const PostContainer = (props) => {
 }
 
 PostContainer.propTypes = {
-    posts : PropTypes.object
+    posts : PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        thumbnailUrl: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        likes: PropTypes.number.isRequired,
+        timestamp: PropTypes.string.isRequired,
+        comments: PropTypes.array
+        })
 }
 
 
