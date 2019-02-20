@@ -9,9 +9,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts : []
+      posts : [],
+      filtered:[]
     }
   }
+
 
   componentDidMount() {
     // console.log('App component mounted')
@@ -20,12 +22,25 @@ class App extends Component {
     })
   }
 
+  onSearch = event => {
+    const filteredPosts = this.state.posts.filter(p => {
+      if (p.username.includes(event.target.value)) {
+        return p;
+      }
+    });
+    this.setState({ filtered: filteredPosts })
+  }
+
   render() {
     return (
       <div>
-        <Header />
+        <Header onSearch={this.onSearch} />
         <div>
-          {this.state.posts.map((post, index) => <PostContainer key={index} postId={index} posts={post} />)}
+          {this.state.filtered.length > 0 
+          ? this.state.filtered.map((post, index) => <PostContainer key={index} postId={index} posts={post} />)
+          : this.state.posts.map((post, index) => <PostContainer key={index} postId={index} posts={post} />)
+        }
+          {/* {this.state.posts.map((post, index) => <PostContainer key={index} postId={index} posts={post} />)} */}
         </div>
       </div>      
     );

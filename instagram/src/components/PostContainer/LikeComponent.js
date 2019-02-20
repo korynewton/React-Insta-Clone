@@ -12,14 +12,12 @@ class LikeComponent extends Component {
     }
 
     incrementLikes = () => {
-        // console.log('in the increment function')
         this.setState({
              likes : this.state.likes + 1
         })
     }
 
     render() {
-        // console.log(this.state)
         return (
             <div>
                 <img onClick={this.incrementLikes} src={heart} alt="Like"/>

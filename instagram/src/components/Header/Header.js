@@ -18,7 +18,7 @@ const Header = (props) => {
                 <img src={logo} alt="Instagram"/>
             </div>
             <div className='headerCenter headerBox'>
-                <SearchBar />
+                <SearchBar onSearch={props.onSearch} />
             </div>
             <div className="headerRight headerBox">
                 <img src={navigate} alt="Navigation"/>
