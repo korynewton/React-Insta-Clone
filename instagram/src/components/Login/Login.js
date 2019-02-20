@@ -8,10 +8,14 @@ import {
 
 
 class LoginPage extends React.Component {
-    state = {
-        userText: '',
-        passText: ''
+    constructor() {
+        super();
+        this.state = {
+            userText: '',
+            passText: ''
+        }
     }
+    
 
 
     login = e => {
