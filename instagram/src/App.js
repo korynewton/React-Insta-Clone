@@ -28,6 +28,9 @@ class App extends Component {
       if (p.username.includes(event.target.value)) {
         return p;
       }
+      else {
+        return null
+      }
     });
     this.setState({ filtered: filteredPosts })
   }

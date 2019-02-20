@@ -52,7 +52,7 @@ class LoginPage extends React.Component {
                         <Label for="examplePassword">Password</Label>
                         <Input 
                         type="password" 
-                        name="" placeholder="password" 
+                        placeholder="password" 
                         name="passText" value={this.state.passText} 
                         onChange={this.handleOnChange}
                         />
