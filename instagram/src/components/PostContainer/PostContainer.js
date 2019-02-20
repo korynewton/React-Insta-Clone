@@ -23,13 +23,6 @@ const PostContainer = (props) => {
                 <div className="likeContainer">
                     <LikeComponent likes={props.posts.likes} />
                 </div>
-                {/* <div className="postIcons">
-                    <img src={heart} alt="Like"/>
-                    <img src={comment} alt="Comment"/>
-                </div>
-                <div className="likesTotal">
-                    <CardSubtitle>{props.posts.likes} likes</CardSubtitle>
-                </div> */}
                 <div className='postComments'>
                     <CommentSection comments={props.posts.comments} postId={props.postId} />
                 </div>
