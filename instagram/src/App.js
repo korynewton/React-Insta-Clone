@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import Header from './components/Header/Header.js';
-import PostContainer from './components/PostContainer/PostContainer'
+import PostPage from './components/PostContainer/PostPage'
 
 
 class App extends Component {
@@ -35,13 +35,7 @@ class App extends Component {
     return (
       <div>
         <Header onSearch={this.onSearch} />
-        <div>
-          {this.state.filtered.length > 0 
-          ? this.state.filtered.map((post, index) => <PostContainer key={index} postId={index} posts={post} />)
-          : this.state.posts.map((post, index) => <PostContainer key={index} postId={index} posts={post} />)
-        }
-          {/* {this.state.posts.map((post, index) => <PostContainer key={index} postId={index} posts={post} />)} */}
-        </div>
+        <PostPage posts={this.state.posts} filtered={this.state.filtered} />
       </div>      
     );
   }
