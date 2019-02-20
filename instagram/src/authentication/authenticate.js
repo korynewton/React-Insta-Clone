@@ -1,10 +1,33 @@
 import React from 'react'
 
-const authenticate = Component => {
+
+const authenticate = Component => LoginPage => {
     return (
         class extends React.Component {
-            render() {
-                return <Component />     
+            constructor(props) {
+                super(props)
+                this.state = {
+                    loggedIn : false,
+                }
+            }
+
+            componentDidMount() {
+                if (!localStorage.getItem('kory')) {
+                    this.setState({loggedIn: false})
+                }
+                else {
+                    this.setState({loggedIn: true})
+                }
+            }
+
+            render() {  
+                if (this.state.loggedIn) {
+                    return <Component />
+                }     
+                else {
+                    return <LoginPage />
+                }
+                        
             }
         }
     )
