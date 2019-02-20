@@ -21,7 +21,7 @@ class CommentSection extends Component {
     commmentSubmit = e => {
         e.preventDefault();
         const newComment = {
-            username : 'kory',
+            username : localStorage.getItem('username'),
             text: this.state.comment
         }
         // const comments = this.state.comments.slice();

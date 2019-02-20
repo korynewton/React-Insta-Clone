@@ -16,7 +16,7 @@ class LoginPage extends React.Component {
 
     login = e => {
         e.preventDefault();
-        localStorage.setItem(this.state.userText, this.state.passText);
+        localStorage.setItem('username', this.state.userText);
         window.location.reload();
     }
 

@@ -12,7 +12,7 @@ const authenticate = Component => LoginPage => {
             }
 
             componentDidMount() {
-                if (!localStorage.getItem('kory')) {
+                if (!localStorage.getItem('username')) {
                     this.setState({loggedIn: false})
                 }
                 else {
