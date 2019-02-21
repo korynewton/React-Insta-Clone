@@ -1,12 +1,24 @@
 import React from 'react';
-import './InputComponent.css';
+import styled from 'styled-components'
+
+const StyledInput = styled.input`
+    margin-top: 10px;
+    width:80%;
+`
+const StyledButton = styled.button`
+    margin-top: 10px;
+    width:20%;
+`
+
+
+
 
 
 const InputComponent = (props) => {
         return (
         <form className='input' onSubmit={props.commmentSubmit}>
-            <input onChange={props.commentHandler} placeholder="Add a Comment..." type="text" value={props.comment}/>
-            <button>Comment</button>
+            <StyledInput onChange={props.commentHandler} placeholder="Add a Comment..." type="text" value={props.comment}/>
+            <StyledButton>Comment</StyledButton>
         </form>
     )
 }

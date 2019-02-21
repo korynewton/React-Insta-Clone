@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 
 const StyledParentContainerDiv = styled.div`
-    width:640px;
+    max-width:640px;
     display: flex;
     flex-flow: column nowrap;
     margin: 30px auto;
@@ -37,6 +37,7 @@ export const StyledUserName = styled.p`
 
 `
 const StyledPostImg = styled.img`
+
 `
 const PostBody = styled.div`
 `

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import dummyData from './dummy-data';
 import Header from './components/Header/Header.js';
 import PostPage from './components/PostContainer/PostPage';
