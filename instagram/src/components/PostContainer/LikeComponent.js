@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import heart from '../../images/icons/heart.svg';
 import comment from '../../images/icons/message-circle.svg';
-import { CardSubtitle } from 'reactstrap';
+// import { CardSubtitle } from 'reactstrap';
+import styled from 'styled-components'
+
+
+const ActionIcon = styled.img`
+    margin: 10px;
+`
+const LikesTotal = styled.h6`
+    margin-left: 10px;
+`
 
 class LikeComponent extends Component {
     constructor(props) {
@@ -19,11 +28,11 @@ class LikeComponent extends Component {
 
     render() {
         return (
-            <div>
-                <img onClick={this.incrementLikes} src={heart} alt="Like"/>
-                <img src={comment} alt="Comment"/>
-                <CardSubtitle>{this.state.likes} likes</CardSubtitle>
-            </div>
+            <>
+                <ActionIcon onClick={this.incrementLikes} src={heart} alt="Like"/>
+                <ActionIcon src={comment} alt="Comment"/>
+                <LikesTotal>{this.state.likes} likes</LikesTotal>
+            </>
         )
     }
     

@@ -1,8 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
-// import './PostContainer.css';
-// import { Card, CardImg, CardBody} from 'reactstrap';
 import LikeComponent from './LikeComponent';
 import styled from 'styled-components';
 
@@ -30,9 +28,13 @@ const StyledThumbNail = styled.img`
     height: 30px;
     margin-left: 10px;
 `
-const StyledUserName = styled.p`
+export const StyledUserName = styled.p`
     margin: auto 10px;
-    font-weight: 500;
+    font-weight: 700;
+
+    ${props => (props.type === "comment" ? `font-weight:450` : null )}
+    ${props => (props.type === "comment" ? `margin:0 5px 0 0` : null )}
+
 `
 const StyledPostImg = styled.img`
 `

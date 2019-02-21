@@ -1,13 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+import styled from 'styled-components'
+import { StyledUserName } from '../PostContainer/PostContainer';
 
+const StyledIndCommentDiv = styled.div`
+    display:flex;
+    flex-flow: row wrap;
+    width:100%;
+    padding-left: 10px;
+`
 
 const Comment = (props) => {
     return (
-        <div className='individualComment'>
-            <strong className='user'>{props.user}</strong> <span className='text'>{props.text}</span>
-        </div>
+        <StyledIndCommentDiv>
+            <StyledUserName type='comment'>{props.user}</StyledUserName> <span>{props.text}</span>
+        </StyledIndCommentDiv>
     )
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
 import InputComponent from './InputComponent';
+import styled from 'styled-components';
 
 
 class CommentSection extends Component {
