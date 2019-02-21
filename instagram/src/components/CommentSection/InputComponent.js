@@ -7,12 +7,16 @@ const StyledInput = styled.input`
     height:30px;
     border: none;
     border-top: 1px solid black;
+    /* border-bottom: 1px solid lightgrey; */
+    margin-bottom: 1px;
+
 `
 const StyledButton = styled.button`
     /* margin-top: 10px; */
     width:20%;
     border: none;
     border-top: 1px solid black;
+    border-bottom: 1px solid lightgrey;
     background: lightgray;
 
     &:hover{

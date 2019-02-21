@@ -20,10 +20,13 @@ const LogoHeader = styled.div`
     justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
+
+    
 `
 const LogoImage = styled.img`
     max-height: 30px;
     width:auto;
+    margin-top: 10px;
 `
 
 const SearchDiv = styled.div`
@@ -36,6 +39,13 @@ const NavIconsDiv = styled.div`
     justify-content: space-around;
 `
 
+const Space = styled.span`
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+`
+
 
 
 const Header = (props) => {
@@ -43,7 +53,7 @@ const Header = (props) => {
         <StyledHeader>
             <LogoHeader>
                 <LogoImage src={instaLogo} alt="Instagram"/>
-                <h3> | </h3>
+                <Space> | </Space>
                 <LogoImage src={logo} alt="Instagram"/>
             </LogoHeader>
             <SearchDiv>

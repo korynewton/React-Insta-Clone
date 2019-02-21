@@ -10,6 +10,7 @@ const ActionIcon = styled.img`
 `
 const LikesTotal = styled.h6`
     margin-left: 10px;
+    margin-bottom: 10px;
 `
 
 class LikeComponent extends Component {
