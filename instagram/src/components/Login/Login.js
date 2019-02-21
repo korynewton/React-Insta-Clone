@@ -10,7 +10,7 @@ const MainContainer = styled.div`
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 40px auto;
+    margin: 20px auto;
     width: 300px;
     background: lightgray;
     font-family: 'Segoe UI';
