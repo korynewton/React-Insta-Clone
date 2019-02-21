@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-// import './App.css';
 import dummyData from './dummy-data';
 import Header from './components/Header/Header.js';
 import PostPage from './components/PostContainer/PostPage';
 import authenticate from './authentication/authenticate';
 import LoginPage from './components/Login/Login';
+
+import styled from 'styled-components';
+const StyledMainDiv = styled.div`
+  font-family: 'Segoe UI';
+`
+
 
 class App extends Component {
   constructor() {
@@ -37,10 +42,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <StyledMainDiv>
         <Header onSearch={this.onSearch} />
         <PostPage posts={this.state.posts} filtered={this.state.filtered} />
-      </div>      
+      </StyledMainDiv>      
     );
   }
 }
