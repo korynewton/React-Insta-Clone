@@ -1,6 +1,5 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
-// import Logo from '../../images/image.png'
 import instaLogo from '../../images/icons/instagram.svg';
 import navigate from '../../images/icons/compass.svg';
 import like from '../../images/icons/heart.svg';

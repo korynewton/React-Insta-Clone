@@ -1,10 +1,20 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledInput = styled.input`
+    width: 100%;
+
+    &:hover {
+        border: 1px solid black;
+    }
+
+`
 
 const SearchBar = (props) => {
     return (
-        <div>
-            <input type="text" placeholder='Search' onKeyDown={props.onSearch} />
-        </div>
+        <>
+            <StyledInput type="text" placeholder='Search' onKeyDown={props.onSearch} />
+        </>
     );
 };
 
