@@ -1,37 +1,67 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
-import { Card, CardImg, CardBody} from 'reactstrap';
+// import './PostContainer.css';
+// import { Card, CardImg, CardBody} from 'reactstrap';
 import LikeComponent from './LikeComponent';
+import styled from 'styled-components';
 
 
+const StyledParentContainerDiv = styled.div`
+    width:640px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 30px auto;
+    border: 1px solid lightgray;
+`
+
+const StyledPostHeader = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid blue; */
+    height:50px;
+`
+
+const StyledThumbNail = styled.img`
+    border-radius: 50%;
+    width:30px;
+    height: 30px;
+    margin-left: 10px;
+`
+const StyledUserName = styled.p`
+    margin: auto 10px;
+    font-weight: 500;
+`
+const StyledPostImg = styled.img`
+`
+const PostBody = styled.div`
+`
 
 
 
 const PostContainer = (props) => {
     return (
-        <Card className='postContainer'>
-            <div className='postHeader'>
-                <img src={props.posts.thumbnailUrl} alt={props.posts.username}/>
-                <p>{props.posts.username}</p>
-            </div>
-            <div className='postImage'>
-                <CardImg src={props.posts.imageUrl} alt={props.posts.username}/>
-            </div>
-            <CardBody>
-                <div className="likeContainer">
-                    <LikeComponent likes={props.posts.likes} />
-                </div>
-                <div className='postComments'>
-                    <CommentSection comments={props.posts.comments} postId={props.postId} />
-                </div>
-            </CardBody>
-            
-            
-        </Card>
+        <StyledParentContainerDiv>
+
+            <StyledPostHeader>
+                <StyledThumbNail src={props.posts.thumbnailUrl} alt={props.posts.username}/>
+                <StyledUserName>{props.posts.username}</StyledUserName>            
+            </StyledPostHeader>
+
+            <StyledPostImg src={props.posts.imageUrl} alt={props.posts.username}/>
+
+            <PostBody>
+                <LikeComponent likes={props.posts.likes} />
+                <CommentSection comments={props.posts.comments} postId={props.postId} />
+            </PostBody>    
+
+        </StyledParentContainerDiv>
+
     )
 }
+
 
 PostContainer.propTypes = {
     posts : PropTypes.shape({
