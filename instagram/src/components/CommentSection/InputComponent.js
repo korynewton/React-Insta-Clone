@@ -1,5 +1,5 @@
-import React from 'react'
-import './InputComponent.css'
+import React from 'react';
+import './InputComponent.css';
 
 
 const InputComponent = (props) => {

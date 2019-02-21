@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import './reset.css'
+import './reset.css';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 

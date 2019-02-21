@@ -1,7 +1,7 @@
-import React from 'react'
-import CommentSection from '../CommentSection/CommentSection'
-import PropTypes from 'prop-types'
-import './PostContainer.css'
+import React from 'react';
+import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
+import './PostContainer.css';
 import { Card, CardImg, CardBody} from 'reactstrap';
 import LikeComponent from './LikeComponent';
 

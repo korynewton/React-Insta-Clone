@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import heart from '../../images/icons/heart.svg'
-import comment from '../../images/icons/message-circle.svg'
+import heart from '../../images/icons/heart.svg';
+import comment from '../../images/icons/message-circle.svg';
 import { CardSubtitle } from 'reactstrap';
 
 class LikeComponent extends Component {
